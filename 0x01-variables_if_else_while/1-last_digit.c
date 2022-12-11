@@ -5,22 +5,21 @@
 /*
  * main - main block
  *
- * Description: Assign random number to n anytime it is executed
- * As last less than 5, equal to 0 and less than 6 and not equal to zero
+ * Description: Get a random number check the last digits and compare with 5
  *
- * Return: (0)
+ * Return: Always 0
  */
 
 int main(void)
-
 {
 	int n;
-	int last;
 
-	last = 0;
+	int last;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
+	last = n % 10;
 		if (last > 5)
 			printf("Last digit of %d is %d and is greater than 5\n", n, last);
 		else if (last == 0)
