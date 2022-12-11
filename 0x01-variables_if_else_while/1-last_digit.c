@@ -3,14 +3,14 @@
 #include <stdio.h>
 
 /*
- * main - main block
+ * main- main block
  *
  * Description: Get a random number check the last digits and compare with 5
  *
  * Return: Always 0
  */
 
-int main(void)
+int main(void);
 {
 	int n;
 
