@@ -15,10 +15,10 @@ int main(void)
 
 	while (i <= '9')
 	{
-		printf("%c\n", i);
+		putchar(i);
 		i++;
 	}
-
+	putchar('\n');
 	return (0);
 }
 
