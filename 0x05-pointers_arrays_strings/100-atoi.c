@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * -atoi - converts a string to an integer
+ * _atoi - converts a string to an integer
  *  @s: string to be converted
  *
  *  Return: the int converted from the string
@@ -24,11 +24,11 @@ int _atoi(char *s)
 	while (i < len && f == 0)
 	{
 		if (s[i] == '-')
-			++d
+			++d;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			digit = s[i] -'0';
+			digit = s[i] - '0';
 			if (d % 2)
 				digit = -digit;
 			n = n * 10 + digit;
