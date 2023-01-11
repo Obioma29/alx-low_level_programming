@@ -1,10 +1,23 @@
 #include "main.h"
 /**
- * _isdigit - checks for uppercase character that are digits
- * @c: character
- * Return: 0 or 1
+ * _isupper - checks upper case
+ * @c: print in
+ * Return: give 1 f c is uppercase or 0 otherwise
  */
-int _isdigit(int c)
+
+int _isupper(int c)
+
 {
-	return  (c >= '0' && c <= '9');
+	char uppercase = 'A';
+	int isupper = 0;
+
+	for (; uppercase <= 'Z'; uppercase++)
+	{
+	if (c == uppercase)
+	{
+	isupper = 1;
+	break;
+	}
+	}
+	return (isupper);
 }
