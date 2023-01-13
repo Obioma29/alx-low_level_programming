@@ -1,49 +1,42 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * _memset - fills memory with a constant byte
+ * @s: memory area to be filled
+ * @b: char to copy
+ * @n: number of times to copy b
  *
- * Return: Nothing.
+ * Return: pointer to the memory area s
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
-	i = 0;
-	while (i < size)
+	for (i = 0; i < n; i++)
 	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
+		s[i] = b;
 	}
-	printf("\n");
+	return (s);
 }
 /**
- * main - check the code
+ * _calloc - allocates memory for an array
+ * @nmemb: number of elements in the array
+ * @size: size of each element
  *
- * Return: Always 0.
+ * Return: pointer to allocated memory
  */
-int main(void)
-{
-	char *a;
 
-	a = _calloc(98, sizeof(char));
-	strcpy(a, "Best");
-	strcpy(a + 4, " School! :)\n");
-	a[97] = '!';
-	simple_print_buffer(a, 98);
-	free(a);
-	return (0);
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *ptr;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(size * nmemb);
+	if (ptr == NULL)
+		return (NULL);
+	_memset(ptr, 0, nmemb * size);
+	return (ptr);
 }
