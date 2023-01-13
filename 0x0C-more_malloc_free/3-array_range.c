@@ -24,7 +24,3 @@ int *array_range(int min, int max)
 		ptr[i] = min++;
 	return (ptr);
 }
-int main()
-{
-	return (0);
-}
