@@ -1,3 +1,5 @@
+#ifndef elf_header_H
+#define elf_header_H
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
