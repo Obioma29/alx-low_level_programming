@@ -4,9 +4,9 @@
  * @size: size of both width and length
  * Return: square made of '#'
  */
-void print_square(int size)
+void print_sqaure(int size)
 {
-	int co, ro;
+	int co, ro
 
 	if (size <= 0)
 	{
@@ -18,11 +18,9 @@ void print_square(int size)
 		{
 			_putchar('#');
 
+		}
 		for (ro = 2; ro <= size; ro++)
 		{
 			_putchar('#');
 		}
-		_putchar('\n');
-		}
-	}
-}
+		_putchar
